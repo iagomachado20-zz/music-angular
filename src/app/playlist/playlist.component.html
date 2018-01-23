@@ -1,0 +1,10 @@
+<h2 class="title-playlist" [hidden]="!tituloPlaylist">{{tituloPlaylist}}</h2>
+<ul class="list-playlist">
+  <li *ngFor="let musica of playlist" (click)="onSelect(musica)">
+      <div class="figure">
+        <img src="../assets/{{musica.capa}}" alt="{{musica.titulo}}">
+        <button class="fa fa-play-circle"></button>
+      </div>
+      <h3 class="name">{{musica.titulo}}</h3>
+  </li>
+</ul>

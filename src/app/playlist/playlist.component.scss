@@ -1,0 +1,68 @@
+.title-playlist {
+    text-align: center;
+    font-size: 2em;
+}
+.list-playlist {
+    display: flex;
+    padding: 0;
+    flex-wrap: wrap;
+    margin: 0;
+    li {
+        width: 15%;
+        list-style: none;
+        position: relative;
+        margin-right: 2%;
+        margin-bottom: 1%;
+        cursor: pointer;
+        img {
+            width: 100%;
+            display: block;
+        }
+        &:nth-child(6n) {
+            margin-right: 0;
+        }
+        .name {
+            margin: 5px 0;
+            font-size: 0.9em;
+            font-weight: 400;
+        }
+        &:hover {
+            .figure {
+                &:after {
+                    content: '';
+                    background: rgba(0,0,0,0.4);
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                }
+                .fa-play-circle {
+                    opacity: 1;
+                }
+            }
+        }
+        .figure {
+            position: relative;
+            .fa-play-circle {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0%;
+                border: 0;
+                opacity: 0;
+                transition: all 0.4s ease;
+                text-align: center;
+                color: white;
+                font-size: 80px;
+                width: 100%;
+                cursor: pointer;
+                margin: auto;
+                z-index: 5;
+                background: transparent;
+            }
+        }
+        
+    }   
+}
