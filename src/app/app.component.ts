@@ -8,11 +8,6 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
 
   title = 'app';
-  playlistNow: any;
-
-  constructor() {}
   
-  onPlayNow(evento) {
-    this.playlistNow = evento;
-  }
+  constructor() {}
 }

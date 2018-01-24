@@ -37,18 +37,19 @@
                     width: 100%;
                     height: 100%;
                 }
-                .fa-play-circle {
+                .fa-play-circle-o {
                     opacity: 1;
                 }
             }
         }
         .figure {
             position: relative;
-            .fa-play-circle {
+            .fa-play-circle-o {
                 position: absolute;
                 left: 0;
                 right: 0;
                 top: 0;
+                font-weight: 400;
                 bottom: 0%;
                 border: 0;
                 opacity: 0;

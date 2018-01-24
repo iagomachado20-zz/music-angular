@@ -1,6 +1,5 @@
 <main class="container-main" [BackgroundGradient]="'#c48b29, #a9400d'">
     <app-sidebar></app-sidebar>
-    <app-playlist titulo="Siga seu artista favorito e saiba das novidades!" (playNow)="onPlayNow($event)"></app-playlist>
-    <app-playlist titulo="Paradas" (playNow)="onPlayNow($event)"></app-playlist>
+    <router-outlet></router-outlet>
 </main>
 <app-player></app-player>
