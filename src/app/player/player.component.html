@@ -1,9 +1,9 @@
 <div class="bar-player">
-    <div class="album-playing">
-      <img src="../assets/capa.jpg" class="figure" alt="Nome">
+    <div class="album-playing" *ngIf="musicPlayNow">
+      <img src="../assets/{{musicPlayNow.capa}}" class="figure" alt="musicPlayNow.titulo">
       <h4 class="title">
-        Twist And Shout - Remastered 2009
-        <small class="author">The Beatles</small>
+        {{musicPlayNow.titulo}}
+        <small class="author">{{musicPlayNow.author}}</small>
       </h4>
     </div>
 </div>

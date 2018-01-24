@@ -1,30 +1,30 @@
-import { Injectable } from '@angular/core';
-import { Playlist } from '../../models';
+import { Injectable, EventEmitter } from '@angular/core';
+import { Playlist } from '../../../models';
 
 let PLAYLIST = [
   {
     id: 1,
     titulo: 'Descobertas da Semana',
-    author: 'Cartola',
+    author: 'Michael Jackson',
     capa: 'capa.jpg' 
   },
   {
     id: 2,
     titulo: 'Funk 2000',
-    author: 'Cartola',
-    capa: 'capa.jpg' 
+    author: 'Pink Floyd',
+    capa: 'capa2.jpg' 
   },
   {
     id: 3,
     titulo: 'Sertanejo',
-    author: 'Cartola',
+    author: 'Maiara e Maraisa',
     capa: 'capa.jpg' 
   },
   {
     id: 4,
     titulo: 'Bailando',
-    author: 'Cartola',
-    capa: 'capa.jpg' 
+    author: 'Malumma',
+    capa: 'capa2.jpg' 
   },
   {
     id: 5,
@@ -37,16 +37,25 @@ let PLAYLIST = [
     titulo: 'Bailando',
     author: 'Cartola',
     capa: 'capa.jpg' 
-  },
+  }
 ];
+
+
 
 @Injectable()
 export class PlaylistService {
 
-  constructor() { }
+  emitPlayMusicNow = new EventEmitter<object>();
+
+  constructor() { 
+  }
 
   getPlaylist(): Playlist[] {
     return PLAYLIST;
+  }
+
+  sendPlayNow(musica:object) {
+    this.emitPlayMusicNow.emit(musica);
   }
 
 }

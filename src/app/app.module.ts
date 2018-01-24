@@ -7,8 +7,9 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { PlaylistComponent } from './playlist/playlist.component';
 
-import { PlaylistService } from './playlist/playlist.service';
+import { PlaylistService } from './shared/services/playlist.service';
 import { PlayerComponent } from './player/player.component';
+import { BackgroundGradientDirective } from './shared/background-gradient.directive';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PlayerComponent } from './player/player.component';
     AppComponent,
     SidebarComponent,
     PlaylistComponent,
-    PlayerComponent
+    PlayerComponent,
+    BackgroundGradientDirective
   ],
   imports: [
     BrowserModule,

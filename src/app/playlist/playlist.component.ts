@@ -1,15 +1,16 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+
 import { Musica } from '../../models';
-import { PlaylistService } from './playlist.service';
+import { PlaylistService } from '../shared/services/playlist.service';
 
 @Component({
   selector: 'app-playlist',
   templateUrl: './playlist.component.html',
-  styleUrls: ['./playlist.component.scss']
+  styleUrls: ['./playlist.component.scss'],
 })
 export class PlaylistComponent implements OnInit {
 
-  private playlist:Musica[] =[];
+  private playlist:Musica[] = [];
 
   @Input('titulo') 
   tituloPlaylist: string;
@@ -20,7 +21,7 @@ export class PlaylistComponent implements OnInit {
   constructor(private PlaylistService: PlaylistService) {}
 
   onSelect(musica: Musica): void {
-    this.playNow.emit(musica);
+    this.PlaylistService.sendPlayNow(musica);
   }
 
   getPlaylist() {
@@ -28,7 +29,9 @@ export class PlaylistComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.getPlaylist();
+  
   }
 
 }

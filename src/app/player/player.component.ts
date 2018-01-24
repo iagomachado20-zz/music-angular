@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PlaylistService } from '../shared/services/playlist.service';
+
 @Component({
   selector: 'app-player',
   templateUrl: './player.component.html',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
 
-  constructor() { }
+  musicPlayNow:object;
+
+  constructor(private PlaylistService: PlaylistService) { }
 
   ngOnInit() {
+
+    this.PlaylistService.emitPlayMusicNow.subscribe(
+      musica => this.musicPlayNow = musica
+    );
   }
 
 }
