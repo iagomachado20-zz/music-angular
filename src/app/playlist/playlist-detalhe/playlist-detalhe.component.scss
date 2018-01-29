@@ -1,0 +1,49 @@
+.wrapper-playlist {
+    display: flex;
+    justify-content: space-between;
+    > .figure-box {
+        width: 280px;
+        margin: 0;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+    }
+    > .list-musics {
+       flex-grow: 1;
+       margin: 0;
+       margin-left: 2%;
+       padding: 0;
+        li {
+            padding: 10px;
+            box-sizing: border-box;
+            list-style: none;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            font-size: 0.9em;
+            line-height: 1.2;
+            &.playing {
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.2));
+                border: 0;
+            }
+            &:hover {
+                .fa {
+                    transform: scale(1.2);
+                }
+            }
+            .fa {
+                font-size: 30px;
+                transition: transform 0.2s ease;
+                margin-right: 15px;
+            }
+            p {
+                margin: 0;
+            }
+            strong {
+                display: block;
+            }
+        }
+    }
+}

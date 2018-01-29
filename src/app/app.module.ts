@@ -2,36 +2,33 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MaterializeModule } from 'angular2-materialize';
-import { routing } from './app.routing';
+import { AppRoutingModule } from './app.routing.module';
 
 import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
-import { PlaylistComponent } from './playlist/playlist.component';
-
-import { PlaylistService } from './shared/services/playlist.service';
 import { PlayerComponent } from './player/player.component';
 import { BackgroundGradientDirective } from './shared/background-gradient.directive';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { PlaylistModule } from './playlist/playlist.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
-    PlaylistComponent,
-    PlayerComponent,
     BackgroundGradientDirective,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    PlayerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    routing
+    AppRoutingModule,
+    PlaylistModule
   ],
   providers: [
-    PlaylistService,
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR',

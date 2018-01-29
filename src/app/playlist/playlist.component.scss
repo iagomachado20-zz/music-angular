@@ -24,13 +24,14 @@
         .name {
             margin: 5px 0;
             font-size: 0.9em;
+            outline: none;
             font-weight: 400;
         }
         &:hover {
             .figure {
                 &:after {
                     content: '';
-                    background: rgba(0,0,0,0.4);
+                    background: rgba(94, 74, 74, 0.4);
                     position: absolute;
                     left: 0;
                     top: 0;
