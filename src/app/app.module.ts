@@ -11,6 +11,8 @@ import { BackgroundGradientDirective } from './shared/background-gradient.direct
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PlaylistModule } from './playlist/playlist.module';
+import { AuthService } from './shared/services/auth.service';
+import { AuthGuard } from './shared/guards/auth-guard';
 
 
 @NgModule({
@@ -28,12 +30,7 @@ import { PlaylistModule } from './playlist/playlist.module';
     AppRoutingModule,
     PlaylistModule
   ],
-  providers: [
-    {
-      provide: LOCALE_ID,
-      useValue: 'pt-BR',
-    }
-  ],
+  providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

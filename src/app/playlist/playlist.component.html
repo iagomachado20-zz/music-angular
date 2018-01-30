@@ -5,6 +5,6 @@
         <img src="../assets/{{musica.capa}}" alt="{{musica.titulo}}">
         <button class="fa fa-play-circle-o"></button>
       </div>
-      <h3 class="name" [routerLink]="['playlist', '10']">{{musica.titulo}}</h3>
+      <h3 class="name" [routerLink]="['/playlist', musica.id]">{{musica.titulo}}</h3>
   </li>
 </ul>

@@ -1,64 +1,12 @@
 <div class="wrapper-playlist">
   <figure class="figure-box">
-      <img src="../assets/capa.jpg" alt="Capa">
-      <small>Nome do Álbum</small>
+      <img src="../assets/{{playlist.capa}}" alt="{{playlist.titulo}}">
+      <small>{{playlist.titulo}}</small>
   </figure>
   <ul class="list-musics">
-    <li class="playing">
+    <li *ngFor="let musica of playlist.musicas" (click)="onSelect(musica)">
       <i class="fa fa-play-circle"></i>
-      <p>Welcome to the Jungle</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Feel Good</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Welcome to the Jungle</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Feel Good</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Welcome to the Jungle</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Feel Good</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Welcome to the Jungle</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Feel Good</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Welcome to the Jungle</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Feel Good</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Welcome to the Jungle</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Feel Good</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Welcome to the Jungle</p>
-    </li>
-    <li>
-      <i class="fa fa-play-circle"></i>
-      <p>Feel Good</p>
+      <p>{{musica.titulo}}</p>
     </li>
   </ul>
 </div>

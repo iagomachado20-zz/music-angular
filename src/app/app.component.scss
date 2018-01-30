@@ -7,4 +7,7 @@
     color: white;
     box-sizing: border-box;
     padding-bottom: 100px;
+    &.full {
+        padding: 35px;
+    }
 }
