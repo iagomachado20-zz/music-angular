@@ -5,7 +5,9 @@ import { ModuleWithProviders } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PlaylistDetalheComponent } from './playlist/playlist-detalhe/playlist-detalhe.component';
+import { PerfilComponent } from './perfil/perfil.component';
 import { AuthGuard } from './shared/guards/auth-guard';
+
 
 const ROUTES: Routes = [
         
@@ -13,9 +15,11 @@ const ROUTES: Routes = [
 
     { path: 'login', component: LoginComponent },
 
-    { path: 'playlist/:id', component: PlaylistDetalheComponent, canActivate: [AuthGuard]},
+    { path: 'perfil', component: PerfilComponent },
 
-    { path: '**', component: HomeComponent,  canActivate: [AuthGuard]}
+    { path: 'playlist/:id', component: PlaylistDetalheComponent, canActivate: [AuthGuard] },
+
+    { path: '**', component: HomeComponent,  canActivate: [AuthGuard] }
 ];
 
 @NgModule({

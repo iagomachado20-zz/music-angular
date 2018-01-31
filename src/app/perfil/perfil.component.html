@@ -1,0 +1,27 @@
+<header class="header-profile" style="background-image: url(https://images2.alphacoders.com/457/thumb-1920-457801.jpg)">
+    <div class="content">
+      <img src="http://via.placeholder.com/120x120" class="avatar">
+      <div class="info">
+        <h1 class="title">Iago Machado da Silva</h1>
+        <p>Volta Redonda - RJ</p>
+      </div>
+    </div>
+</header>
+<form class="form-container" #form="ngForm" (ngSubmit)="onSubmit(form)">
+  <div class="block-form">
+      <h2 class="title">1 - Dados Pessoais</h2>
+      <div class="row-form">
+          <div class="grid-6">
+            <label for="nome" class="input-form">Nome
+              <input type="text" id="nome" placeholder="Digite seu nome" class="input" name="nome" [(ngModel)]="usuario.nome" required>
+            </label>
+          </div>
+          <div class="grid-6">
+            <label class="input-form" for="email">E-mail
+              <input type="email" id="email" placeholder="Digite seu e-mail" class="input" name="email" [(ngModel)]="usuario.email" required email>
+            </label>
+          </div>
+      </div>
+      <button type="submit" class="button">Atualizar</button>
+  </div>
+</form>

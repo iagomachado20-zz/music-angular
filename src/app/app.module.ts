@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { PlaylistModule } from './playlist/playlist.module';
 import { AuthService } from './shared/services/auth.service';
 import { AuthGuard } from './shared/guards/auth-guard';
+import { PerfilModule } from './perfil/perfil.module';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AuthGuard } from './shared/guards/auth-guard';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    PlaylistModule
+    PlaylistModule,
+    PerfilModule
   ],
   providers: [AuthService, AuthGuard],
   bootstrap: [AppComponent]

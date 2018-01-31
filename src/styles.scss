@@ -16,7 +16,93 @@ body, html {
     box-sizing: border-box;
 }
 
-input,button, textarea {
+input,button, textarea, select {
     outline: none;
     font-family: $font;
+}
+
+.form-container {
+    .block-form {
+        margin-bottom: 10px;
+    }
+    .title {
+        margin-bottom: 25px;
+    }
+    .row-form {
+        margin: 0 -15px;
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+    }
+    .input-form {
+        font-weight: bold;
+        .input {
+            width: 100%;
+            margin: 2px 0;
+            height: 40px;
+            padding: 0;
+            color: rgba(255,255,255,0.6);
+            padding: 0px;
+            font-size: 0.85em;
+            background: transparent;
+            border: 0;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.6);
+            &::placeholder {
+                color: rgba(255,255,255,0.6);
+            }
+            &:focus {
+                color: white;
+            }
+            &.ng-invalid {
+                border-color: rgb(197, 114, 59);
+                color: rgb(197, 114, 59);
+            }
+            &.ng-valid {
+                border-color: rgb(59, 197, 112);
+            }
+            &.ng-pristine {
+                border-color: rgba(255,255,255,0.6);
+                color: rgba(255,255,255,0.6);
+            }
+        }  
+    }
+}
+
+
+
+$grid-gutter: 15px; // espaçamento entre as colunas
+$grid-columns: 12;
+
+[class*="grid-"] {
+	float: left;
+	padding: 0 15px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+
+@for $i from 1 through $grid-columns {
+	.grid-#{$i} {
+		width: 100% / $grid-columns * $i;
+	}
+}
+
+.button {
+    text-transform: uppercase;
+    background: white;
+    color: black;
+    height: 50px;
+    border: 0;
+    cursor: pointer;
+    padding: 0 15px;
+    transition: all 0.4s ease;
+    outline: none;
+    font-weight: 600;
+    &:hover {
+        background: rgb(59, 197, 112);
+        color: white;
+    }
+
 }

@@ -1,0 +1,39 @@
+.header-profile {
+    background-color: #3e3e3e;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 35px 45px;
+    height: 220px;
+    margin: -35px -52px 45px;
+    display: block;
+    position: relative;
+    .content {
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+        height: 100%;
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        background: rgba(0,0,0,0.5);
+        left: 0;
+        top: 0;
+        display: block;
+        height: 100%;
+    }
+    .avatar {
+        border-radius: 100%;
+        border: 5px solid rgba(0,0,0,0.1);
+    }
+    .info {
+        margin: 15px;
+        .title, p {
+            margin: 5px;
+        }
+    }
+    
+}
