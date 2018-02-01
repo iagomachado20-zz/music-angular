@@ -12,11 +12,11 @@ export class PerfilComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
   }
 
   onSubmit(form) {
 
+      console.log(form);
     
   }
 }

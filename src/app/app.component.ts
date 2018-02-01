@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { AuthService } from './shared/services/auth.service';
+import { AlertService } from './shared/services/alert.service';
 
 
 @Component({
@@ -7,15 +8,18 @@ import { AuthService } from './shared/services/auth.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
 
   title = 'SpotyFree';
+  mostrarMenu:boolean;
 
-  mostrarMenu: boolean = false;
+  alert: object = {}
 
-  constructor(private authService: AuthService) {
-
-  }
+  constructor(
+    private authService: AuthService,
+    private _alertService: AlertService
+  )
+  {}
 
   ngOnInit() {
     
@@ -26,5 +30,6 @@ export class AppComponent implements OnInit{
     );
 
   }
+
 
 }

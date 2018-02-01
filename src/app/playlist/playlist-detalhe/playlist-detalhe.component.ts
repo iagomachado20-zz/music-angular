@@ -24,7 +24,7 @@ export class PlaylistDetalheComponent implements OnInit {
   ngOnInit() {
     this.inscricao = this.route.params.subscribe(
       (params: any) => {
-        this.playlist = this.playlist_service.getPlaylistById(params["id"]);
+        this.playlist = this.playlist_service.getPlaylistById(params['id']);
       }
     );
   }

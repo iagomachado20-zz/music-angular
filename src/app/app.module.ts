@@ -14,6 +14,8 @@ import { PlaylistModule } from './playlist/playlist.module';
 import { AuthService } from './shared/services/auth.service';
 import { AuthGuard } from './shared/guards/auth-guard';
 import { PerfilModule } from './perfil/perfil.module';
+import { AlertBarComponent } from './alert-bar/alert-bar.component';
+import { AlertService } from './shared/services/alert.service';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { PerfilModule } from './perfil/perfil.module';
     BackgroundGradientDirective,
     HomeComponent,
     LoginComponent,
-    PlayerComponent
+    PlayerComponent,
+    AlertBarComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +35,7 @@ import { PerfilModule } from './perfil/perfil.module';
     PlaylistModule,
     PerfilModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

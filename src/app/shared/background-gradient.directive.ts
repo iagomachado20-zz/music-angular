@@ -7,7 +7,7 @@ export class BackgroundGradientDirective implements OnInit{
 
   @HostBinding('style.background-image') backgroundGradient: string;
 
-  @Input('BackgroundGradient') Color: string = "#1267a8, #196baa";
+  @Input('BackgroundGradient') Color = "#1267a8, #196baa";
   
   constructor() {}
 

@@ -18,14 +18,14 @@ export class PlaylistComponent implements OnInit {
   @Output()
   playNow = new EventEmitter();
   
-  constructor(private PlaylistService: PlaylistService) {}
+  constructor(private playlistService: PlaylistService) {}
 
   onSelect(musica: Musica): void {
-    this.PlaylistService.sendPlayNow(musica);
+    this.playlistService.sendPlayNow(musica);
   }
 
   getPlaylist() {
-    this.playlist = this.PlaylistService.getPlaylist();
+    this.playlist = this.playlistService.getPlaylist();
   }
 
   ngOnInit() {

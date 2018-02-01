@@ -15,7 +15,7 @@ const ROUTES: Routes = [
 
     { path: 'login', component: LoginComponent },
 
-    { path: 'perfil', component: PerfilComponent },
+    { path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]  },
 
     { path: 'playlist/:id', component: PlaylistDetalheComponent, canActivate: [AuthGuard] },
 

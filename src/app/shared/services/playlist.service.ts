@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Playlist } from '../../../models';
 
-let PLAYLIST = [
+const PLAYLIST = [
   {
     id: 1,
     titulo: 'Descobertas da Semana',
@@ -10,25 +10,25 @@ let PLAYLIST = [
     musicas: [
       {
         id: 1,
-        titulo: "Get it",
-        author: "U2",
+        titulo: 'Get it',
+        author: 'U2',
         capa: 'capa3.jpg',
       },
       {
         id: 2,
-        titulo: "Wonderwall",
-        author: "Oasis",
+        titulo: 'Wonderwall',
+        author: 'Oasis',
         capa: 'capa4.jpg',
       },
       {
         id: 3,
-        titulo: "Californication",
-        author: "Red Hot Chili Pepers",
+        titulo: 'Californication',
+        author: 'Red Hot Chili Pepers',
         capa: 'capa4.jpg',
       },
       {
         id: 4,
-        titulo: "Nirvana",
+        titulo: 'Nirvana',
         author: "In Bloom",
         capa: 'capa4.jpg',
       }    
@@ -42,29 +42,29 @@ let PLAYLIST = [
     musicas: [
       {
         id: 1,
-        titulo: "Get it",
-        author: "U2",
-        capa: '',
+        titulo: 'Get it',
+        author: 'U2',
+        capa: 'capa3.jpg',
       },
       {
         id: 2,
-        titulo: "Wonderwall",
-        author: "Oasis",
+        titulo: 'Wonderwall',
+        author: 'Oasis',
         capa: 'capa4.jpg',
       },
       {
         id: 3,
-        titulo: "Californication",
-        author: "Red Hot Chili Pepers",
-        capa: 'capa3.jpg',
+        titulo: 'Californication',
+        author: 'Red Hot Chili Pepers',
+        capa: 'capa4.jpg',
       },
       {
         id: 4,
-        titulo: "Nirvana",
+        titulo: 'Nirvana',
         author: "In Bloom",
         capa: 'capa4.jpg',
       }    
-    ]  
+    ] 
   },
   {
     id: 3,
@@ -74,29 +74,29 @@ let PLAYLIST = [
     musicas: [
       {
         id: 1,
-        titulo: "Get it",
-        author: "U2",
+        titulo: 'Get it',
+        author: 'U2',
         capa: 'capa3.jpg',
       },
       {
         id: 2,
-        titulo: "Wonderwall",
-        author: "Oasis",
+        titulo: 'Wonderwall',
+        author: 'Oasis',
         capa: 'capa4.jpg',
       },
       {
         id: 3,
-        titulo: "Californication",
-        author: "Red Hot Chili Pepers",
-        capa: 'capa.jpg',
+        titulo: 'Californication',
+        author: 'Red Hot Chili Pepers',
+        capa: 'capa4.jpg',
       },
       {
         id: 4,
-        titulo: "Nirvana",
+        titulo: 'Nirvana',
         author: "In Bloom",
-        capa: 'capa.jpg',
+        capa: 'capa4.jpg',
       }    
-    ]  
+    ]   
   },
   {
     id: 4,
@@ -106,27 +106,27 @@ let PLAYLIST = [
     musicas: [
       {
         id: 1,
-        titulo: "Get it",
-        author: "U2",
-        capa: 'capa.jpg',
+        titulo: 'Get it',
+        author: 'U2',
+        capa: 'capa3.jpg',
       },
       {
         id: 2,
-        titulo: "Wonderwall",
-        author: "Oasis",
+        titulo: 'Wonderwall',
+        author: 'Oasis',
         capa: 'capa4.jpg',
       },
       {
         id: 3,
-        titulo: "Californication",
-        author: "Red Hot Chili Pepers",
-        capa: 'capa.jpg',
+        titulo: 'Californication',
+        author: 'Red Hot Chili Pepers',
+        capa: 'capa4.jpg',
       },
       {
         id: 4,
-        titulo: "Nirvana",
+        titulo: 'Nirvana',
         author: "In Bloom",
-        capa: 'capa2.jpg',
+        capa: 'capa4.jpg',
       }    
     ]  
   },
@@ -138,25 +138,25 @@ let PLAYLIST = [
     musicas: [
       {
         id: 1,
-        titulo: "Get it",
-        author: "U2",
-        capa: 'capa4.jpg',
+        titulo: 'Get it',
+        author: 'U2',
+        capa: 'capa3.jpg',
       },
       {
         id: 2,
-        titulo: "Wonderwall",
-        author: "Oasis",
+        titulo: 'Wonderwall',
+        author: 'Oasis',
         capa: 'capa4.jpg',
       },
       {
         id: 3,
-        titulo: "Californication",
-        author: "Red Hot Chili Pepers",
+        titulo: 'Californication',
+        author: 'Red Hot Chili Pepers',
         capa: 'capa4.jpg',
       },
       {
         id: 4,
-        titulo: "Nirvana",
+        titulo: 'Nirvana',
         author: "In Bloom",
         capa: 'capa4.jpg',
       }    
@@ -170,29 +170,29 @@ let PLAYLIST = [
     musicas: [
       {
         id: 1,
-        titulo: "Get it",
-        author: "U2",
+        titulo: 'Get it',
+        author: 'U2',
         capa: 'capa3.jpg',
       },
       {
         id: 2,
-        titulo: "Wonderwall",
-        author: "Oasis",
-        capa: 'capa3.jpg',
+        titulo: 'Wonderwall',
+        author: 'Oasis',
+        capa: 'capa4.jpg',
       },
       {
         id: 3,
-        titulo: "Californication",
-        author: "Red Hot Chili Pepers",
-        capa: 'capa3.jpg',
+        titulo: 'Californication',
+        author: 'Red Hot Chili Pepers',
+        capa: 'capa4.jpg',
       },
       {
         id: 4,
-        titulo: "Nirvana",
+        titulo: 'Nirvana',
         author: "In Bloom",
         capa: 'capa4.jpg',
       }    
-    ]  
+    ]   
   }
 ];
 
@@ -217,9 +217,9 @@ export class PlaylistService {
     
     for (let i=0; i< PLAYLIST.length; i++) { 
        
-      let playlist = PLAYLIST[i];
+      const playlist = PLAYLIST[i];
 
-      if (id == playlist.id) {
+      if (id === playlist.id) {
         return playlist;
       }
     }

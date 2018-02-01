@@ -21,6 +21,10 @@ input,button, textarea, select {
     font-family: $font;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 30px white inset;
+}
+
 .form-container {
     .block-form {
         margin-bottom: 10px;
@@ -38,6 +42,7 @@ input,button, textarea, select {
     }
     .input-form {
         font-weight: bold;
+        position: relative;
         .input {
             width: 100%;
             margin: 2px 0;
@@ -56,16 +61,30 @@ input,button, textarea, select {
             &:focus {
                 color: white;
             }
-            &.ng-invalid {
+            &.ng-invalid.ng-touched {
                 border-color: rgb(197, 114, 59);
                 color: rgb(197, 114, 59);
             }
             &.ng-valid {
                 border-color: rgb(59, 197, 112);
             }
-            &.ng-pristine {
-                border-color: rgba(255,255,255,0.6);
-                color: rgba(255,255,255,0.6);
+        }
+        .tooltip {
+            background: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 30px;
+            position: absolute;
+            right: 0;
+            top: 15px;
+            transform: translateY(0);
+            opacity: 0;
+            margin-top: 10px;
+            transition: all 0.4s ease;
+            display: inline-block;
+            &.show {
+                opacity: 1;
+                transform: translateY(-15px);
             }
         }  
     }
@@ -100,9 +119,13 @@ $grid-columns: 12;
     transition: all 0.4s ease;
     outline: none;
     font-weight: 600;
-    &:hover {
+    &:hover:not([disabled]) {
         background: rgb(59, 197, 112);
         color: white;
+    }
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
     }
 
 }

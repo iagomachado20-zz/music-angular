@@ -7,21 +7,23 @@
       </div>
     </div>
 </header>
-<form class="form-container" #form="ngForm" (ngSubmit)="onSubmit(form)">
+<form class="form-container" #form="ngForm" (ngSubmit)="onSubmit(form)" autocomplete="off">
   <div class="block-form">
       <h2 class="title">1 - Dados Pessoais</h2>
       <div class="row-form">
           <div class="grid-6">
             <label for="nome" class="input-form">Nome
-              <input type="text" id="nome" placeholder="Digite seu nome" class="input" name="nome" [(ngModel)]="usuario.nome" required>
+              <input type="text" id="nome" placeholder="Digite seu nome" class="input" name="nome" [(ngModel)]="usuario.nome" required #nome="ngModel" minlength="3">
+              <small class="tooltip" [ngClass]="{'show': !nome.valid && nome.touched}">Nome é obrigatório.</small>
             </label>
           </div>
           <div class="grid-6">
             <label class="input-form" for="email">E-mail
-              <input type="email" id="email" placeholder="Digite seu e-mail" class="input" name="email" [(ngModel)]="usuario.email" required email>
+              <input type="email" id="email" placeholder="Digite seu e-mail" class="input" name="email" [(ngModel)]="usuario.email" required email #email="ngModel">
+              <small class="tooltip" [ngClass]="{'show': !email.valid && email.touched}">E-mail é obrigatório.</small>
             </label>
           </div>
       </div>
-      <button type="submit" class="button">Atualizar</button>
+      <button type="submit" class="button" [disabled]="!form.valid"> <i class="fa fa-edit"></i> Atualizar Perfil</button>
   </div>
 </form>

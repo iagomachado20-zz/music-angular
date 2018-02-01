@@ -1,0 +1,42 @@
+.bar-alert {
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    z-index: 50;
+    padding: 15px;
+    text-align: center;
+    background: rgb(59, 197, 112);
+    color: white;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    align-items: center;
+    box-sizing: border-box;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(-100%);
+    .fa-close {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        border-radius: 100%;
+        border: 0;
+        background: white;
+        color: black;
+        text-align: center;
+        transition: all 0.4s ease;
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+    p {
+        margin: 0;
+    }
+    &.on {
+        transform: translateY(0%);
+    }
+}

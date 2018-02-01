@@ -1,0 +1,4 @@
+<div class="bar-alert" [ngClass]="{'on': objAlert.show}">
+  <p>{{objAlert.message}}</p>
+  <button class="fa fa-close" (click)="closeAlert($event)"></button>
+</div>
