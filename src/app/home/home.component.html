@@ -1,2 +1,7 @@
-<app-playlist titulo="Siga seu artista favorito e saiba das novidades!" (playNow)="onPlayNow($event)"></app-playlist>
-<app-playlist titulo="Paradas" (playNow)="onPlayNow($event)"></app-playlist>
+<nav class="nav-buttons">
+    <a [routerLink]="['destaques']" routerLinkActive="active">Destaques</a>
+    <a [routerLink]="['generos']" routerLinkActive="active">Gêneros</a>
+    <a>Artistas</a>
+</nav>
+<router-outlet></router-outlet>
+

@@ -23,9 +23,9 @@ export class AlertBarComponent implements OnInit {
 
       setTimeout(()=>{
 
-        this.alertService.showAlert(false, null);
+        this.objAlert = { show: false, message: null};
 
-      }, 4000);
+      }, 2500);
 
     });
 

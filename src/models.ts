@@ -18,3 +18,9 @@ export class Usuario {
   senha:string;
   email:string;
 }
+
+export class Genero {
+  id:number;
+  titulo:string;
+  capa:string;
+}

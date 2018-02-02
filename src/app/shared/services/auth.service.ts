@@ -19,7 +19,7 @@ export class AuthService {
       localStorage.setItem('logado', '1');
       this.userAutenticado = true;
       this.showMenu.emit(true);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/home/destaques']);
       
     }
     else {

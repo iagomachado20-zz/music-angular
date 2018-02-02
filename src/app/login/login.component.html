@@ -1,15 +1,18 @@
 <fieldset class="container-login">
-  <div class="box">
-      <header class="header-block">
-        <img src="../assets/logo-color.png" class="brand" alt="Project">
-        <h1 class="title">Faça seu login, e obtenha acesso a milhares de músicas.</h1>
-      </header>
-      <label for="email" class="label">E-mail
-        <input id="email" type="email" [(ngModel)]="usuario.email" name="email">
-      </label>
-      <label for="senha" class="label">Senha
-        <input id="senha" type="password" [(ngModel)]="usuario.senha" name="senha">
-      </label>
-      <button class="button" (click)="doLogin()">Enviar</button>
+  <div class="container">
+    <img src="../assets/logo.png" class="brand">
+    <div class="box">
+        <header class="header-block">
+          <h1 class="title">Login</h1>
+          <p class="description">Tenha acesso a milhares de músicas.</p>
+        </header>
+        <label for="email" class="label">E-mail
+          <input id="email" type="email" [(ngModel)]="usuario.email" name="email">
+        </label>
+        <label for="senha" class="label">Senha
+          <input id="senha" type="password" [(ngModel)]="usuario.senha" name="senha">
+        </label>
+        <button class="button" (click)="doLogin()">Enviar</button>
+    </div>
   </div>
 </fieldset>

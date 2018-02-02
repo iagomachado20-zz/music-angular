@@ -129,3 +129,37 @@ $grid-columns: 12;
     }
 
 }
+
+.nav-buttons {
+    padding: 25px 0;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    a {
+        font-size: 1em;
+        padding: 5px 0;
+        color: rgba(255,255,255,0.9);
+        transition: all 0.4s ease;
+        margin: 5px 10px;
+        outline: none;
+        text-decoration: none;
+        position: relative;
+        &:after {
+            content: '';
+            width: 00%;
+            position: absolute;
+            height: 3px;
+            transition: all 0.4s ease;
+            left: 0;
+            top: 100%;
+            margin-top: 5px;
+            display: inline-block;
+            background: rgb(59, 197, 112);
+        }
+        &.active {
+            color: rgb(59, 197, 112);
+            &:after {
+                width: 100%;
+            }
+        }
+    }
+}

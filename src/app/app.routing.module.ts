@@ -7,11 +7,23 @@ import { LoginComponent } from './login/login.component';
 import { PlaylistDetalheComponent } from './playlist/playlist-detalhe/playlist-detalhe.component';
 import { PerfilComponent } from './perfil/perfil.component';
 import { AuthGuard } from './shared/guards/auth-guard';
+import { PlaylistComponent } from './playlist/playlist.component';
+import { GenerosComponent } from './home/generos/generos.component';
+import { DestaquesComponent } from './home/destaques/destaques.component';
 
 
 const ROUTES: Routes = [
         
-    { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+    {path: 'home', component: HomeComponent, canActivate: [AuthGuard],
+        children: [
+            {
+                path: 'destaques', component: DestaquesComponent   
+            },
+            {
+                path: 'generos', component: GenerosComponent   
+            }
+        ]
+    },
 
     { path: 'login', component: LoginComponent },
 

@@ -10,9 +10,6 @@ export class HomeComponent implements OnInit {
 
   constructor(private alertService: AlertService) { }
 
-  ngOnInit() {
-    this.alertService.showAlert(true, "Seja Bem Vindo");
-  }
-
+  ngOnInit() {}
 
 }

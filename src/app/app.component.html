@@ -1,5 +1,5 @@
 <app-alert-bar></app-alert-bar>
-<main class="container-main" [BackgroundGradient]="'#0f4379, #000000'" [ngClass]="{'full': !mostrarMenu}">
+<main class="container-main" [BackgroundGradient]="bgChoice" [ngClass]="{'full': !mostrarMenu}">
     <app-sidebar *ngIf="mostrarMenu"></app-sidebar>
     <router-outlet></router-outlet>
 </main>
